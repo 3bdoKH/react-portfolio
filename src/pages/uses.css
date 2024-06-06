@@ -1,0 +1,101 @@
+.main-uses {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 8rem;
+}
+
+.main-uses .description {
+    max-width: 60%;
+    margin-bottom: 5rem;
+}
+
+.main-uses .description h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: var(--title);
+    font-weight: 700;
+
+}
+
+.main-uses .description p {
+    color: var(--subtitle);
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+.main-uses section {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+}
+
+.main-uses section>h2 {
+    font-size: 0.875rem;
+    color: var(--title);
+}
+
+.main-uses section:not(last-of-type) {
+    margin-bottom: 3rem;
+}
+
+.main-uses section div {
+    grid-column: span 4 / span 4;
+}
+
+.main-uses section div article {
+    margin: 0 0 2rem 0;
+    max-width: 75%;
+}
+
+.main-uses section div article h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--title);
+}
+
+.main-uses section div article p {
+    color: var(--subtitle);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media (width < 1024px) {
+    .main-uses .description {
+        max-width: 100%;
+    }
+
+    .main-uses {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (width < 767px) {
+    .main-uses section div {
+        grid-column: span 5 / span 5;
+    }
+
+    .main-uses .description h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .main-uses section {
+        padding-left: 0;
+        border: none;
+    }
+
+    .main-uses section:not(last-of-type) {
+        border-bottom: 1px solid var(--border);
+
+    }
+
+    .main-uses section>h2 {
+        margin-bottom: 3rem;
+        grid-column: span 5 / span 5;
+        color: var(--blue);
+    }
+}

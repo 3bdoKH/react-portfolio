@@ -1,0 +1,119 @@
+.main-articles {
+    max-width: 75%;
+    margin: 100px 0;
+    padding: 0 3rem;
+}
+
+.main-articles .discrebtion {
+    margin-bottom: 70px;
+}
+
+.main-articles .discrebtion h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: var(--title);
+}
+
+.main-articles .discrebtion p {
+    color: var(--subtitle);
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.main-articles .content {
+    padding-left: 20px;
+    padding-top: 10px;
+    border-left: 1px solid var(--border);
+}
+
+.main-articles .content .article {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: grid;
+    margin-bottom: 50px;
+
+}
+
+.main-articles .content .article .article-link {
+    grid-column: span 3 / span 3;
+    padding: 20px;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+.main-articles .content .article .article-link:hover {
+    background-color: var(--border);
+}
+
+.main-articles .content .article .article-link h2 {
+    color: var(--title);
+    font-size: 15px;
+}
+
+.main-articles .content .article>span {
+    font-size: 14px;
+    color: var(--subtitle);
+    padding-top: 5px;
+}
+
+.main-articles .content .article .article-link p {
+    color: var(--subtitle);
+    line-height: 1.5rem;
+    margin: .5rem 0 1rem;
+    font-size: 0.875rem;
+    font-weight: 200;
+}
+
+.main-articles .content .article .article-link .read {
+    margin-top: 20px;
+    color: var(--blue);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+@media (width < 1024px) {
+    .main-articles {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+}
+
+@media (width < 767px) {
+    .main-articles .content {
+        padding-left: 0;
+        border: none;
+    }
+
+    .main-articles {
+        position: relative;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+    }
+
+    .main-articles .content .article>span {
+        border-left: 2px solid var(--border);
+        padding-left: 5px;
+    }
+
+    .main-articles .content .article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-articles .content .article .article-link {
+        grid-column: span 4 / span 4;
+        margin-top: 10px;
+    }
+
+    .main-articles .discrebtion h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+}

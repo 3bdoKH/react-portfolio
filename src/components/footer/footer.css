@@ -1,0 +1,41 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0 45px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+footer ul li a:hover {
+    color: var(--blue);
+}
+
+footer p {
+    color: var(--subtitle);
+    font-size: 14px;
+}
+
+@media (max-width:600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        margin-bottom: 10px;
+    }
+}

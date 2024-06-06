@@ -1,0 +1,172 @@
+:root {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, .5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+}
+
+.main-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 3rem;
+}
+
+.n-image {
+    max-width: none;
+    padding-left: .625rem;
+    padding-right: .625rem;
+}
+
+.main-section .left h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: -.025em;
+    font-weight: 700;
+}
+
+.main-section .left p {
+    color: var(--subtitle);
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.main-section .left {
+    grid-row: span 2 / span 2;
+    order: -9999;
+
+}
+
+.main-section .image {
+    padding-left: 5rem;
+}
+
+.main-section .right {
+    padding-left: 5rem;
+
+}
+
+
+.main-section .image img {
+    border-radius: 15px;
+    object-fit: cover;
+    --tw-bg-opacity: 1;
+    background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+    --tw-rotate: 3deg;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.main-section .right ul {
+    width: 100%;
+}
+
+.main-section .right ul li a {
+    font-size: 14px;
+    color: var(--title);
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+
+
+.main-section .right ul li a span {
+    color: var(--subtitle);
+    font-size: 20px;
+}
+
+.main-section .right ul li a:hover {
+    color: var(--blue);
+}
+
+.main-section .right ul li {
+    margin: 30px 0;
+}
+
+.main-section .right ul li:last-of-type {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+@media (width < 1024px) {
+    .main-section {
+        row-gap: 4rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .n-image {
+        padding-left: .625rem;
+        padding-right: .625rem;
+        max-width: 20rem;
+    }
+
+    .main-section .image {
+        padding-left: 0;
+        grid-row-start: 1;
+    }
+
+    .main-section .right {
+        padding-left: 0;
+    }
+
+    @media (width < 640px) {
+        .container {
+            width: 100% !important;
+        }
+    }
+}

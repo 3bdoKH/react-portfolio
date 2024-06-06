@@ -1,0 +1,142 @@
+.main-content-speaking {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-speaking .description {
+    max-width: 60%;
+    margin-bottom: 5rem;
+}
+
+.main-content-speaking .description h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: var(--title);
+}
+
+.main-content-speaking .description p {
+    color: var(--subtitle);
+    line-height: 1.75rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+.main-content-speaking .first,
+.main-content-speaking .second {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 2rem;
+    align-items: baseline;
+    max-width: 48rem;
+    border-left: 1px solid var(--border);
+    margin-bottom: 5rem;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+
+.main-content-speaking .first h2,
+.main-content-speaking .second h2 {
+    color: var(--title);
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.main-content-speaking .first>div,
+.main-content-speaking .second>div {
+    grid-column: span 3 / span 3;
+}
+
+.main-content-speaking div div a article:not(last-of-type) {
+    margin-bottom: 3rem;
+}
+
+.main-content-speaking div div a article>span {
+    color: var(--subtitle);
+    padding: 5px 0 5px 15px;
+    border-left: 3px solid var(--border);
+
+}
+
+.main-content-speaking div div a article h2 {
+    color: var(--title);
+    margin: 15px 0;
+}
+
+.main-content-speaking div div a article p {
+    color: var(--subtitle);
+    line-height: 1.5rem;
+    font-size: .875rem;
+    margin-bottom: 20px;
+}
+
+.main-content-speaking div div a article div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--blue);
+    font-size: 0.875rem;
+}
+
+.main-content-speaking div div article {
+    position: relative;
+    padding: 20px;
+    z-index: 11;
+}
+
+.main-content-speaking div div article::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: var(--border);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: .2s;
+    scale: 0;
+    z-index: -1;
+}
+
+.main-content-speaking div div article:hover::after {
+    scale: 1;
+}
+
+@media (width < 1024px) {
+    .main-content-speaking .description {
+        max-width: 90%;
+    }
+}
+
+@media (width < 767px) {
+    .main-content-speaking .description {
+        max-width: 100%;
+    }
+
+    .main-content-speaking {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .main-content-speaking .first,
+    .main-content-speaking .second {
+        border: none;
+        padding-left: 0;
+    }
+
+    .main-content-speaking .first>div,
+    .main-content-speaking .second>div {
+        grid-column: span 4 / span 4;
+    }
+}
+
+@media (width < 640px) {
+    .main-content-speaking .description h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}

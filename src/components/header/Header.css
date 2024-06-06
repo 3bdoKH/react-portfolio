@@ -1,0 +1,180 @@
+header {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+}
+
+header nav {
+    background-color: var(--bgHeader);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+    box-shadow: 1px 1px 5px black;
+}
+
+header ul.flex {
+    gap: 24px;
+}
+
+
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: .3s;
+}
+
+header ul li a:hover {
+    color: var(--blue);
+}
+
+header button {
+    font-size: 16.8px;
+}
+
+.show {
+    display: none;
+}
+
+header .fixed {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(40, 40, 48, 0.91);
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+header .fixed ul.model {
+    width: 85%;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: var(--secondary);
+    padding: 20px 20px 10px;
+    position: relative;
+    animation: move .6s;
+}
+
+header .fixed ul.model li {
+    padding: 10px;
+}
+
+header .fixed ul.model .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-weight: bold;
+    color: var(--subtitle);
+    transition: .3s;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header .fixed ul.model .close:hover {
+    transform: rotate(180deg);
+    color: rgb(240, 86, 48);
+}
+
+header .fixed ul.model li:not(:last-of-type) {
+    border-bottom: 1px solid var(--border);
+}
+
+header .show {
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--bgHeader);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: .3s;
+}
+
+header .show:hover,
+.icon-moon-o:hover {
+    border-color: white;
+}
+
+header .show span {
+    width: 50%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.356);
+    margin: 1.8px 0;
+}
+
+header .show span:nth-child(2) {
+    width: 25%;
+    transition: .3s;
+}
+
+header .show:hover span {
+    width: 50%;
+}
+
+.icon-moon-o {
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--bgHeader);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #71717A;
+    transition: .3s;
+}
+
+.icon-sun {
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--bgHeader);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #71717A;
+    transition: .3s;
+}
+
+.logo img {
+    width: 50px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 50%;
+    display: none;
+}
+
+@keyframes move {
+    0% {
+        scale: 0;
+    }
+
+    60% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    header nav {
+        display: none;
+    }
+
+    header .show {
+        display: flex;
+    }
+}
